@@ -1,6 +1,6 @@
 # 🚀 DSA Journey with Python & C++ 💻
 
-Welcome to my repository! Here, I document my **daily grind** of solving **LeetCode**, **HackerRank**, and **GeeksforGeeks** problems as I learn and master **Data Structures and Algorithms (DSA)**. 🌟
+Welcome to my repository! Here, I document my **daily grind** of solving **LeetCode**, **HackerRank**, or **GeeksforGeeks** problems as I learn and master **Data Structures and Algorithms (DSA)**. 🌟
 
 ---
 
@@ -15,5 +15,3 @@ Welcome to my repository! Here, I document my **daily grind** of solving **LeetC
 
 ---
 
-## 📂 Repository Structure
-Each folder corresponds to a specific platform or topic:
