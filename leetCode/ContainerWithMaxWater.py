@@ -18,4 +18,3 @@ def maxArea( height):
 
     return max_area
 
-        
