@@ -22,7 +22,32 @@ def commonElement(arr1 , arr2):
             return True
     return False
 
-
 arr1 = ['a', 'b', 'c', 'x']
 arr2 = ['z', 'y', 'x']
-print(commonElement(arr1,arr2))
+# print(commonElement(arr1,arr2))
+# TC: O(m+n)
+
+# SOlUTION 2 (Language specific):
+def commonElement2(arr1 , arr2):
+    return set(arr1).intersection(arr2)
+
+if commonElement2(arr1,arr2):
+    print(True)
+else:
+    print(False)
+
+def commonElement3(arr1,arr2):
+    for i in arr1:
+        if i in arr2:
+            return True
+    return False
+
+print(commonElement3(arr1,arr2))
+
+
+# In JAVASCRIPT:
+# const commonElement4 = (arr1,arr2) => {
+#     return arr1.some(item => arr2.includes(item))
+# }
+
+# console.log(commonElement3(arr1,arr2))
