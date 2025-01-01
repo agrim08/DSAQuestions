@@ -10,6 +10,7 @@
 
 # arrays has no size limit
 
+#SOLUTION 1: O(m+n) SC: O(m)
 def commonElement(arr1 , arr2):
     map = {}
     for i in range(len(arr1)):
@@ -25,9 +26,9 @@ def commonElement(arr1 , arr2):
 arr1 = ['a', 'b', 'c', 'x']
 arr2 = ['z', 'y', 'x']
 # print(commonElement(arr1,arr2))
-# TC: O(m+n)
 
-# SOlUTION 2 (Language specific):
+
+# SOlUTION 2 (Language specific) O(m+n) SC: O(m+n):
 def commonElement2(arr1 , arr2):
     return set(arr1).intersection(arr2)
 
@@ -36,6 +37,8 @@ if commonElement2(arr1,arr2):
 else:
     print(False)
 
+
+#SOLUTION 3: O(m*n) SC: O(1)
 def commonElement3(arr1,arr2):
     for i in arr1:
         if i in arr2:
@@ -46,6 +49,7 @@ print(commonElement3(arr1,arr2))
 
 
 # In JAVASCRIPT:
+#TC O(m*n) SC: O(1)
 # const commonElement4 = (arr1,arr2) => {
 #     return arr1.some(item => arr2.includes(item))
 # }
