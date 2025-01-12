@@ -1,12 +1,10 @@
 #leetcode 1
 def twoSum(self, nums, target):
-        h = {}
-         
+    h = {}
 
-        for i in range(len(nums)):
-            h[nums[i]] = i
-        for i in range(len(nums)):
-            y = target - nums[i]
-            
-            if y in h and h[y] != i:
-                return [i , h[y]]
+    for i in range(len(nums)):
+        h[nums[i]] = i
+    for i in range(len(nums)):
+        y = target - nums[i]
+        if y in h and h[y] != i:
+            return [i , h[y]]
