@@ -1,6 +1,6 @@
 #leetcode 383
 
-def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+def canConstruct(ransomNote: str, magazine: str) -> bool:
         counter = {}
 
         for c in magazine:
