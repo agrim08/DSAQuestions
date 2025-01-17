@@ -1,5 +1,4 @@
 #leetcode 383
-
 def canConstruct(ransomNote: str, magazine: str) -> bool:
         counter = {}
 
