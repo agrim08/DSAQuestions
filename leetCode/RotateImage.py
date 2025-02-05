@@ -5,7 +5,6 @@ def rotate(self, matrix: List[List[int]]) -> None:
         while l < r:
             for i in range(r - l):
                 top , bot = l , r
-
                 topLeft = matrix[top][l + i]
 
                 #move bottom left to top left
@@ -19,6 +18,5 @@ def rotate(self, matrix: List[List[int]]) -> None:
 
                 #move top left to top right
                 matrix[top + i][r] = topLeft
-            
             r -= 1
             l += 1
