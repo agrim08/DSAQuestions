@@ -5,11 +5,12 @@ Welcome to my repository! Here, I document my **daily grind** of solving **LeetC
 ---
 
 ## 📚 About the Journey
-🔹 **Languages**: Python 🐍 | C++ 🔧  
+🔹 **Languages**: Python 🐍 | JavaScript 🚀
 🔹 **Platforms**:  
    - 🟢 [LeetCode](https://leetcode.com/u/kjCG65pzh9/)  
    - ⚙️ [HackerRank](https://www.hackerrank.com/profile/agrimgupta0805) 
 
 🔹 **Objective**: Sharpen problem-solving skills and build a strong foundation in DSA concepts!  
+
 
 ---
