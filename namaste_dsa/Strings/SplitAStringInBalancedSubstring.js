@@ -19,18 +19,18 @@ var balancedStringSplit = function(s) {
 //approach 2 with extra space
 var balancedStringSplitOptimized = function(s) {
     let count = 0
-    let countR = 0
-    let countL = 0
+    let temp = 0
 
     for(let i = 0; i < s.length; i++){
-        if(s[i] === 'R') countR++
-        else countL ++
+        if(s[i] === 'R') ++temp
+        else --temp
 
-        if(countR === countL){
+        if(temp === 0){
             count++
-            countR = countL = 0
         }
     }
 
     return count
 };
+
+console.log(balancedStringSplitOptimized("RLRRLLRLRL"))
