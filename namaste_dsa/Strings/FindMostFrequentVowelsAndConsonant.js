@@ -2,11 +2,7 @@ var maxFreqSum = function(s) {
     let map = {}
 
     for(let i = 0; i < s.length; i++){
-        if(!map[s[i]]){
-            map[s[i]] = 1
-        }else{
-            ++map[s[i]]
-        }
+        map[s[i]] = map[s[i]] ? ++map[s[i]] : 1
     }
 
     let mapKeys = Object.keys(map)
@@ -16,18 +12,16 @@ var maxFreqSum = function(s) {
 
     for(let i = 0; i < mapKeys.length; i++){
         if(vowels.includes(mapKeys[i])){
-            if(map[mapKeys[i]] > maxV){
-                maxV = map[mapKeys[i]]
-            }
+            maxV = Math.max(maxV, map[mapKeys[i]])
         }else{
-            if(map[mapKeys[i]] > maxC){
-                maxC = map[mapKeys[i]]
-            }
+            maxC = Math.max(maxC, map[mapKeys[i]])
         }
     }
 
     return maxV + maxC
 };
+
+//TC of 2nd loop is O(1) as we can have max 26 characters only inside map
 
 
 console.log(maxFreqSum("successes"))
