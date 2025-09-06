@@ -2,7 +2,7 @@ var findDuplicates = function(nums) {
     let map = {}
     let res = []
 
-    for(num of nums){
+    for(let num of nums){
         if(map[num]){
             res.push(num)
         }else{
