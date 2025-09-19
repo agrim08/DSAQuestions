@@ -1,0 +1,27 @@
+var sortColors = function(arr) {
+    let low = 0
+    let mid = 0
+    let high = arr.length - 1
+
+    while(mid <= high){
+        if(arr[mid] === 0){
+            swap(arr, low, mid)
+            mid++
+            low++
+        }
+        else if(arr[mid] === 2){
+            swap(arr, high, mid)
+            high--
+        }
+        else{
+            mid++
+        }
+    }
+
+};
+
+var swap = function(arr, i1, i2){
+    let temp = arr[i1]
+    arr[i1] = arr[i2]
+    arr[i2] = temp
+}
