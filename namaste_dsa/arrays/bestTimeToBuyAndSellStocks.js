@@ -7,7 +7,7 @@ function MaxProfit(prices){
             maxProfit = prices[i] - min
         }
         if(prices[i] < min){
-            min = prices[0]
+            min = prices[i]
         }
     }
 
