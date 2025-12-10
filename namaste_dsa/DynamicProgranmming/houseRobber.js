@@ -1,3 +1,4 @@
+//O(n) space
 var rob = function(arr) {
     let n = arr.length
     let dp = [arr[0], Math.max(arr[0], arr[1])]
