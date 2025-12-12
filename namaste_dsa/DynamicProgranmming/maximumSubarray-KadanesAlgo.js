@@ -8,4 +8,4 @@ var maxSubArray = function(arr) {
     }
 
     return maxSum
-};  
+};
