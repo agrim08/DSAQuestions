@@ -53,7 +53,9 @@ var coinChange = function(coins, amount) {
         if (rem === 0) return 0;
         if (rem < 0) return -1;
         if (store[rem] !== undefined) return store[rem];
+
         let minCoin = Infinity;
+        
         for (let c of coins) {
             let res = calc(rem - c);
             if (res !== -1) minCoin = Math.min(minCoin, 1 + res);
