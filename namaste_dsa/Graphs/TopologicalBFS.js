@@ -28,5 +28,10 @@ function topologicalSort(n, graph) {
       }
     }
   }
+
+  if(ans.length !== n) {
+    return [] //graph has a cycle
+  }
+  
   return ans
 }
