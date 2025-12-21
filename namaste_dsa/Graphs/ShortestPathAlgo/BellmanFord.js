@@ -5,11 +5,14 @@ var bellmanFord = function(n, edges, src) {
     dist[src] = 0
 
     for (let i = 0; i < n - 1; i++) {
+        let updated = false
         for (let [u, v, w] of edges) {
             if (dist[u] !== Infinity && dist[u] + w < dist[v]) {
                 dist[v] = dist[u] + w
+                updated = true
             }
         }
+        if (!updated) break
     }
 
     // Check for negative cycles
