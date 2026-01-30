@@ -1,5 +1,11 @@
 //top-down approach
 
+/**
+ * Approach: DFS (Top-Down / Bottom-Up).
+ * Intuitively, the depth of a tree is 1 plus the maximum depth of its children.
+ * We can either pass depth down as a parameter or recursively aggregate the
+ * maximum height from the leaves upward.
+ */
 var maxDepth = function(root) {
     if(!root) return 0
     let maxDepth = 0

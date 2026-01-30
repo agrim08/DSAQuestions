@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking / DFS.
+ * Intuitively, we start from every cell matching the first letter of the word.
+ * We explore all four directions, marking visited cells temporarily with a placeholder
+ * to avoid cycles, and backtrack if the path doesn't lead to the target word.
+ */
 var exist = function(board, word) {
     let res = false
     let n = board.length

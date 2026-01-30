@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search.
+ * Intuitively, even in a rotated array, at least one half of any `[l, r]` split
+ * is always sorted. We identify the sorted half and check if the target lies
+ * within its range to decide which half to discard.
+ */
 var search = function(nums, target) {
     let l = 0
     let r = nums.length - 1

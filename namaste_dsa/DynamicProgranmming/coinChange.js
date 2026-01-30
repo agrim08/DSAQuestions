@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Memoization).
+ * Intuitively, the minimum coins to make an amount is 1 plus the minimum coins
+ * needed for (amount - coin) for all available coins. We explore all paths
+ * and cache results to avoid recalculating the same amounts multiple times.
+ */
 //brute force - TLE
 var coinChange = function(coins, amount) {
     let n = coins.length

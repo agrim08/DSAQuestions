@@ -1,3 +1,9 @@
+/**
+ * Approach: Peak-Valley Traversal.
+ * Intuitively, a mountain must have a strictly increasing phase followed 
+ * by a strictly decreasing phase. We scan the array, identifying 'ups' 
+ * and 'downs', and calculate the length only if both phases exist.
+ */
 var longestMountain = function(arr) {
     if(arr.length < 3) return 0
 

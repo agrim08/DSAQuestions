@@ -1,3 +1,10 @@
+/**
+ * Approach: Greedy (Two Pass).
+ * Intuitively, we satisfy the condition in two steps: first from left to right 
+ * to ensure children with higher ratings than their left neighbor get more candy,
+ * then right to left to do the same for right neighbors. The answer is the 
+ * maximum of both passes for each child.
+ */
 //two pass
 var candy = function(arr) {
     let n = arr.length

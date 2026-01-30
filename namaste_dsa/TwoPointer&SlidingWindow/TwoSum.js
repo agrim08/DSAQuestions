@@ -1,3 +1,9 @@
+/**
+ * Approach: Hash Map (Complement Lookup).
+ * Intuitively, for each number `x`, we check if its complement `target - x` 
+ * has already been seen. Storing seen numbers in a map allows us to find 
+ * the pair in a single pass with O(1) lookup time.
+ */
 //Approach 1
 var twoSum = function(nums, target) {
     for(let i = 0; i < nums.length; i++){

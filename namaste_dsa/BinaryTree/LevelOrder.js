@@ -1,3 +1,9 @@
+/**
+ * Approach: Level-Order Traversal (BFS).
+ * Intuitively, we use a queue to process nodes layer by layer. For each depth,
+ * we collect all node values into an array before moving on to the children,
+ * resulting in a nested structure of level-by-level values.
+ */
 var levelOrder = function(root) {
     if(!root) return []
     let q = [root]

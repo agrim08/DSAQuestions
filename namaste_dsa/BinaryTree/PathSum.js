@@ -1,3 +1,9 @@
+/**
+ * Approach: DFS with Accumulation.
+ * Intuitively, we traverse from root to leaf, subtracting the current node's value
+ * from the target sum. If we reach a leaf and the remaining sum matches the
+ * leaf's value (or reaches zero), a valid path exists.
+ */
 var hasPathSum = function(root, targetSum) {
     if(!root) return false
     let ans = false

@@ -1,3 +1,9 @@
+/**
+ * Approach: Monotonic Stack + Circular Indexing.
+ * Intuitively, in a circular array, the next greater element for a number 
+ * might be behind it. We simulate this by traversing the array twice (using 
+ * `i % n`) to allow elements to look at their predecessors for larger values.
+ */
 var nextGreaterElements = function(nums) {
     let arr = [...nums, ...nums]
     let n = arr.length

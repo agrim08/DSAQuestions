@@ -1,3 +1,9 @@
+/**
+ * Approach: Recursive Overlapping.
+ * Intuitively, we merge two trees by adding their overlapping node values.
+ * If a node exists in only one tree, that subtree becomes part of the merged result;
+ * otherwise, we recursively merge left and right children.
+ */
 var mergeTrees = function(t1, t2) {
     if(!t1) return t2
     if(!t2) return t1

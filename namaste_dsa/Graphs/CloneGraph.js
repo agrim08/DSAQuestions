@@ -11,6 +11,12 @@
  * @return {_Node}
  */
 
+/**
+ * Approach: BFS with Mapping.
+ * Intuitively, to clone a graph, we traverse it and create a deep copy of each 
+ * node. We use a Map to link original nodes with their clones, ensuring that 
+ * shared neighbors point to the correct cloned instances.
+ */
 var cloneGraph = function(node) {
     if (!node) return null
 

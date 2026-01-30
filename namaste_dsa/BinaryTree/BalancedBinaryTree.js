@@ -1,3 +1,9 @@
+/**
+ * Approach: DFS Depth Calculation.
+ * Intuitively, a tree is balanced if the heights of its left and right subtrees
+ * differ by no more than one. We recursively calculate heights and check this
+ * condition at every node to ensure global balance.
+ */
 var isBalanced = function(root) {
     let ans = true
     let calcHeight = (curr) => {

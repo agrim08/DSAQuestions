@@ -1,3 +1,9 @@
+/**
+ * Approach: Difference Array / Bucket Sort.
+ * Intuitively, we track the net change in passengers at each location.
+ * We add passengers at the pickup point and subtract them at the drop-off.
+ * A cumulative sum trek through all locations ensures we never exceed capacity.
+ */
 var carPooling = function (arr, capacity) {
     let loc = Array(1001).fill(0)
 

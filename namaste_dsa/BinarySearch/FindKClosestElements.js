@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search on the Window.
+ * Intuitively, instead of finding the element itself, we search for the starting
+ * index `l` of the window of size `k`. We compare the distance of the elements
+ * at `m` and `m + k` from `x` to decide which direction to shift the window.
+ */
 var findClosestElements = function(arr, k, x) {
     let l = 0
     let r = arr.length - 1

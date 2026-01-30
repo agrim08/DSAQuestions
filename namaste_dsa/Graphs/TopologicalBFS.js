@@ -1,3 +1,9 @@
+/**
+ * Approach: Kahn's Algorithm (BFS).
+ * Intuitively, we repeatedly remove nodes with zero incoming edges (no deps).
+ * As each node is removed, we decrease the dependency count of its neighbors,
+ * adding them to the queue once they too have zero dependencies.
+ */
 //kahn's algorithm for topological sort using BFS
 function topologicalSort(n, graph) {
   let indegree = new Array(n).fill(0)

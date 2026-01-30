@@ -1,3 +1,9 @@
+/**
+ * Approach: Slow-Fast Pointer with Recursion.
+ * Intuitively, we find the middle of the linked list using slow and fast pointers
+ * to make it the root. We then split the list and recursively build the left
+ * and right subtrees to ensure the BST remains balanced.
+ */
 var sortedListToBST = function(head) {
     if(!head) return null
     if(!head.next) return new TreeNode(head.val)

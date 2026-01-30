@@ -1,3 +1,9 @@
+/**
+ * Approach: Frequency Counting (Greedy).
+ * Intuitively, to form the longest palindrome, we use all even-count characters 
+ * and `count - 1` for odd-count characters. If any character had an odd count, 
+ * we can place exactly one such character in the center to increase the length.
+ */
 var longestPalindrome = function(s) {
     const charCount = {}
 

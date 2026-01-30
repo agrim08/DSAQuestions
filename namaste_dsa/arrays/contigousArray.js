@@ -1,3 +1,9 @@
+/**
+ * Approach: Prefix Sum with Hash Map (Relative Frequency).
+ * Intuitively, we treat `0` as `-1` and `1` as `+1`. If a prefix sum 
+ * repeats at two different indices, the subarray between them must 
+ * have sum `0`, meaning it contains an equal number of 0s and 1s.
+ */
 var findMaxLength = function(arr) {
     let store = {};
     let count = 0;

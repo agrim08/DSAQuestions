@@ -1,3 +1,9 @@
+/**
+ * Approach: Monotonic Deque.
+ * Intuitively, we maintain a deque of indices where values are in strictly 
+ * decreasing order. The front of the deque always holds the index of the 
+ * maximum element for the current window.
+ */
 var maxSlidingWindow = function(nums, k) {
     let res = []
     let q = []

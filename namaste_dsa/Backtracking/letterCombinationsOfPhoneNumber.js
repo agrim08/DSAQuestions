@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking / DFS.
+ * Intuitively, we map each digit to its possible letters and explore all paths.
+ * For each digit, we try every possible letter, recurse to the next digit,
+ * and then backtrack to build the next combination.
+ */
 var letterCombinations = function(digits) {
     if(!digits.length) return []
     const letters = {

@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Memoization).
+ * Intuitively, we find total combinations by iterating through each coin.
+ * For each coin, we decide how many times to include it, reducing the target
+ * amount each time and caching the results to avoid redundant calculations.
+ */
 var change = function(amount, coins) {
     let n = coins.length
     let dp = Array.from({length: amount + 1}, () => Array(n).fill(-1))

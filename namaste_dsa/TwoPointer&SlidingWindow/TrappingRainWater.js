@@ -1,3 +1,9 @@
+/**
+ * Approach: Pre-computed Prefix/Suffix Maximums.
+ * Intuitively, the water trapped at any index is limited by the shorter of 
+ * the tallest bars to its left and right. We pre-calculate these boundaries 
+ * for every position to compute the trapped water in one pass.
+ */
 var trap = function(arr) {
     let n = arr.length
 

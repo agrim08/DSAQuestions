@@ -1,3 +1,8 @@
+/**
+ * Approach: Reverse Second Half and Compare.
+ * Intuitively, we find the middle of the list, reverse the second half, and 
+ * then compare it with the first half. If all values match, the list is a palindrome.
+ */
 function PalindromeLL(head){
     //middle of LL
     let slow = fast = head

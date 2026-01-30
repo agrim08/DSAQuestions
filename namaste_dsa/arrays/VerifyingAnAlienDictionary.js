@@ -1,3 +1,10 @@
+/**
+ * Approach: Custom Alphabet Mapping.
+ * Intuitively, we translate the alien order into a numeric weight map. We 
+ * then compare adjacent words character by character, ensuring that for 
+ * any two mismatched characters, the first word's character precedes the 
+ * second word's character in the alien alphabet.
+ */
 var isAlienSorted = function(words, order) {
     const map = new Map()
 

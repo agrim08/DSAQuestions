@@ -1,3 +1,9 @@
+/**
+ * Approach: Two Queue Shuffling.
+ * Intuitively, we use one queue to store the elements and another as temporary 
+ * space. For a pop operation, we move all but the last element to the second 
+ * queue, retrieve the last element, and then swap the roles of the two queues.
+ */
 var MyStack = function() {
     this.q1 = []
     this.q2 = []

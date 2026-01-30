@@ -1,3 +1,9 @@
+/**
+ * Approach: Index-Based Hashing (Cyclic Sort Idea).
+ * Intuitively, for an array of length N, the first missing positive must 
+ * be in [1, N+1]. We treat the array itself as a hash table, where 
+ * `nums[i]` being negative indicates that the number `i + 1` is present.
+ */
 // For an array of length n, the first missing positive must be in the range [1, n].
 // If all numbers 1 to n are present, the answer is n + 1.
 

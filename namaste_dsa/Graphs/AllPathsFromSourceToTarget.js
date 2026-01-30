@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking / DFS.
+ * Intuitively, we explore every possible branch starting from node 0.
+ * Whenever we reach the last node, we record the path taken. We then
+ * backtrack to explore other potential edges from previous nodes.
+ */
 let allPathsSourceTarget = (graph) => {
     let end = graph.length - 1
     let ans = []

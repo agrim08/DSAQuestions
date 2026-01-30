@@ -1,3 +1,9 @@
+/**
+ * Approach: Level-Order Traversal (BFS).
+ * Intuitively, the 'right side view' consists of the last node at each level.
+ * We traverse level by level and pick the value of the node that appears first
+ * (using a right-to-left insertion pattern) or last at each depth.
+ */
 var rightSideView = function(root) {
     if(!root) return []
     let ans = []

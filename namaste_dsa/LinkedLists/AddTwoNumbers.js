@@ -1,3 +1,9 @@
+/**
+ * Approach: Linear Traversal with Carry.
+ * Intuitively, we add nodes from both lists like manual addition, starting 
+ * from the units place. We keep track of a carry and create new nodes for 
+ * each digit of the resulting sum.
+ */
 var addTwoNumbers = function(l1, l2) {
    let carry = 0
    let ans = new ListNode()

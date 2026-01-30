@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking / DFS.
+ * Intuitively, we traverse the tree from root to leaf, maintaining the current path.
+ * When a leaf is reached, we store the full path. We backtrack by removing the node
+ * from the current path to explore other branches.
+ */
 var binaryTreePaths = function(root) {
     let res = []
 

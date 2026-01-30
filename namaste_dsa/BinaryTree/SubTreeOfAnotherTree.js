@@ -1,4 +1,10 @@
 //brute force
+/**
+ * Approach: Brute Force Comparison / Serialization.
+ * Intuitively, a tree is a subtree if it matches the current tree or exists within
+ * any of its subtrees. We either compare every node using `isSameTree` or
+ * serialize both trees and check for substring containment.
+ */
 var isSubtree = function(root, subRoot) {
     if(!root) return false
 

@@ -1,3 +1,9 @@
+/**
+ * Approach: Sorting with Two Pointers.
+ * Intuitively, we sort the array and fix one number `nums[i]`. We then use
+ * two pointers to find two other numbers that sum to `-nums[i]`. We skip 
+ * duplicate elements to ensure we only collect unique triplets.
+ */
 var threeSum = function(arr) {
     arr.sort((a,b) => a - b)
     let ans = []

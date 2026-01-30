@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking.
+ * Intuitively, we build permutations by picking an element and then recursing for all
+ * remaining available elements. We check if an element is already in the `path`
+ * to ensure each element is used exactly once.
+ */
 var permute = function (arr) {
     let res = []
 

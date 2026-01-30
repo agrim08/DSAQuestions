@@ -1,3 +1,9 @@
+/**
+ * Approach: Prefix Sum with Hash Map Lookup.
+ * Intuitively, if the difference between the current prefix sum and `k` has 
+ * occurred before, then the subarray between that occurrence and now sums 
+ * exactly to `k`. We use a map to store how many times each prefix sum appeared.
+ */
 var subarraySum = function(nums, k) {
     let map = new Map()
     map.set(0, 1)

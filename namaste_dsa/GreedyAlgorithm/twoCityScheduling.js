@@ -1,3 +1,9 @@
+/**
+ * Approach: Greedy (Difference-based Sorting).
+ * Intuitively, we want to maximize the saving of choosing City A over City B.
+ * We sort people by the difference `costB - costA`. Those with the highest 
+ * difference (cheaper relative to B) go to City A, and the rest to City B.
+ */
 var twoCitySchedCost = function(costs) {
     costs.sort((a, b) => (b[1] - b[0]) - (a[1] - a[0]))
 

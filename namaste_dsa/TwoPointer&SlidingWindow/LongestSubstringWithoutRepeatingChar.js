@@ -1,3 +1,9 @@
+/**
+ * Approach: Sliding Window + Hash Map.
+ * Intuitively, we maintain a window of unique characters. When we see a 
+ * repeat, we jump the left pointer `i` past the last occurrence of that 
+ * character to ensure the window remains unique.
+ */
 var lengthOfLongestSubstring = function(s) {
     let i = j = 0
     let map = {}

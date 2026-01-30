@@ -1,3 +1,9 @@
+/**
+ * Approach: Range-Bound DFS.
+ * Intuitively, for a BST to be valid, every node must fall within a specific range
+ * defined by its ancestors. As we move left, we update the upper bound; as we move right,
+ * we update the lower bound, ensuring no node violates the BST property.
+ */
 var isValidBST = function(root) {
     let ans = null
     let isBST = (curr, lo, hi) => {

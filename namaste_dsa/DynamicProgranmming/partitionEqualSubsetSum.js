@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (0/1 Knapsack Variation).
+ * Intuitively, to split an array into two equal sums, we must be able to find
+ * a subset that sums up to exactly half of the total sum. we use recursion
+ * with memoization to check every possible subset combination.
+ */
 var canPartition = function(arr) {
     let sum = arr.reduce((acc, curr) => acc + curr, 0)
     if(sum % 2 != 0) return false

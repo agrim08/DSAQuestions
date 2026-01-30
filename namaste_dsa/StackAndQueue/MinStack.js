@@ -1,3 +1,9 @@
+/**
+ * Approach: Pairs / Supplemental Stack.
+ * Intuitively, to get the minimum value in O(1) time, we store each value 
+ * along with the minimum value encountered up to that point. This way, 
+ * when we pop an element, the 'current min' for the next element is already known.
+ */
 var MinStack = function() {
     this.s = []
 };

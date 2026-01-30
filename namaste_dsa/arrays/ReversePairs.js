@@ -1,3 +1,10 @@
+/**
+ * Approach: Modified Merge Sort.
+ * Intuitively, we use the merge sort structure to count pairs. Before 
+ * merging two sorted subarrays, we count how many elements in the left 
+ * subarray are greater than twice the elements in the right subarray, 
+ * preserving O(N log N) complexity.
+ */
 var reversePairs = function (arr) {
     return mergeSort(arr, 0, arr.length - 1);
 };

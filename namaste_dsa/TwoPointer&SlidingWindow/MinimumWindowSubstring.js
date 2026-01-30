@@ -1,3 +1,9 @@
+/**
+ * Approach: Sliding Window + Frequency Table.
+ * Intuitively, we expand the window to include all characters of `t`. Once 
+ * valid, we shrink it from the left to find the smallest possible substring
+ * that still contains all required characters, updating our result as we go.
+ */
 var minWindow = function(s, t) {
     if (s.length < t.length) return "";
 

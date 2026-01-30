@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming.
+ * Intuitively, at each house, you have two choices: rob it (which means skipping
+ * the previous house) or skip it (taking the maximum amount robbed up to the
+ * previous house). We track the maximum running total to ensure no two adjacent houses are robbed.
+ */
 //O(n) space
 var rob = function(arr) {
     let n = arr.length

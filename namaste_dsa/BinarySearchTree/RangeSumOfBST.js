@@ -1,3 +1,9 @@
+/**
+ * Approach: Pruned DFS.
+ * Intuitively, we traverse the tree but only explore branches that could contain
+ * values in the range `[low, high]`. We add the current node's value if it's within
+ * bounds and recursively visit valid subtrees.
+ */
 var rangeSumBST = function(root, low, high) {
     let sum = 0
     let traverse = (curr) => {

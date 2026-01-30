@@ -1,3 +1,9 @@
+/**
+ * Approach: DFS with Max Tracking.
+ * Intuitively, a node is 'good' if it's the largest value seen on the path from the root.
+ * We keep track of the maximum value encountered so far during traversal and
+ * increment our count whenever the current node meets or exceeds it.
+ */
 var goodNodes = function(root) {
     let ans = 0
 

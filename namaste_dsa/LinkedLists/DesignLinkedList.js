@@ -1,3 +1,9 @@
+/**
+ * Approach: Custom Object Implementation.
+ * Intuitively, we define a basic structure for a Linked List by manually 
+ * managing `head` and `size`. Each operation (add/delete) involves traversing 
+ * to the correct index and updating the `next` pointers of the surrounding nodes.
+ */
 function Node(val){
     this.val = val;
     this.next = null

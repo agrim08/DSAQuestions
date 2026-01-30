@@ -1,3 +1,9 @@
+/**
+ * Approach: BFS Traversal.
+ * Intuitively, we explore the graph layer by layer starting from the source.
+ * If we eventually reach the destination node during our traversal, a valid 
+ * path exists. We use a visited set to avoid infinite loops.
+ */
 var validPath = function(n, edges, source, destination) {
     let q = [source]
     let visited = new Set()

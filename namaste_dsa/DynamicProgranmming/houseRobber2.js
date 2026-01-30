@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming.
+ * Intuitively, this is identical to House Robber 1, but since houses are in a circle,
+ * robbing the first excludes the last and vice versa. We run the standard logic twice:
+ * once excluding the first house and once excluding the last, then take the maximum.
+ */
 var rob = function(arr) {
     let n = arr.length
     if(n === 1) return arr[0]

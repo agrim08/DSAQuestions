@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search.
+ * Intuitively, we use two separate binary searches. The first search finds the leftmost
+ * boundary (first occurrence) by shifting right towards the target. The second search
+ * finds the rightmost boundary (last occurrence) by shifting left towards the target.
+ */
 var searchRange = function(nums, target) {
   let l = 0
   let r = nums.length - 1

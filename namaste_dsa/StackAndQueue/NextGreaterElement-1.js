@@ -1,5 +1,10 @@
+/**
+ * Approach: Monotonic Stack + Hashing.
+ * Intuitively, we find the next greater element for every number in `nums2` 
+ * using a monotonic stack. We store these mappings in a hash map for quick 
+ * O(1) retrieval when processing `nums1`.
+ */
 //!Important leetcode 496
-
 var nextGreaterElement = function(nums1, nums2) {
     let s = []
     let map = {}

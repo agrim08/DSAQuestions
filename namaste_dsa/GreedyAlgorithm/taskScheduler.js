@@ -1,3 +1,10 @@
+/**
+ * Approach: Greedy (Mathematical Slotting).
+ * Intuitively, the most frequent tasks dictate the minimum execution time. 
+ * We arrange the most frequent tasks with `n` idle slots between them, then 
+ * fill those slots with other tasks. The total length is either the calculated 
+ * intervals or the actual number of tasks, whichever is larger.
+ */
 var leastInterval = function(arr, n) {
     const freq = {}
     let maxFreq = 0

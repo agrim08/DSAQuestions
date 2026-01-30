@@ -1,3 +1,9 @@
+/**
+ * Approach: Sorting with Adjacent Comparison.
+ * Intuitively, the smallest difference between any two numbers must occur 
+ * between adjacent elements in a sorted array. We sort the array first, 
+ * find the minimum difference, and collect all pairs that match it.
+ */
 var minimumAbsDifference = function(arr) {
     arr.sort((a, b) => a - b);
     let minDiff = Infinity

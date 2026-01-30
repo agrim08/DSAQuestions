@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking with Sorting.
+ * Intuitively, to handle duplicate elements, we sort them first. During recursion,
+ * if the current element is the same as the previous one in the same level,
+ * we skip it to prevent identical permuted sequences.
+ */
 var permuteUnique = function(arr) {
     arr.sort((a, b) => (a - b))
     let res = []

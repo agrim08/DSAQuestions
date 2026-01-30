@@ -1,3 +1,9 @@
+/**
+ * Approach: Level / Open-Balance Tracking.
+ * Intuitively, we keep track of the 'depth' of nested parentheses. We only 
+ * append a parenthesis to our result if its depth is greater than 1, meaning 
+ * it is not an outermost one in its current primitive string.
+ */
 var removeOuterParentheses = function(s) {
     let stack = []
     let ans = ""

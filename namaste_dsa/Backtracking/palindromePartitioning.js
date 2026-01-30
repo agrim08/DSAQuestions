@@ -1,3 +1,9 @@
+/**
+ * Approach: Backtracking.
+ * Intuitively, we split the string at every possible index. If the prefix is a palindrome,
+ * we recurse on the remaining suffix. If we reach the end of the string, the gathered
+ * parts form a valid palindrome partition.
+ */
 var partition = function (s) {
     let res = []
 

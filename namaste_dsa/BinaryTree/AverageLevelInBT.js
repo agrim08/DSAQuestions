@@ -1,3 +1,9 @@
+/**
+ * Approach: Level-Order Traversal (BFS).
+ * Intuitively, we use a queue to traverse the tree level by level. For each level,
+ * we calculate the sum of all node values and divide it by the number of nodes
+ * in that level to find the average.
+ */
 var averageOfLevels = function(root) {
     if (!root) return [];
 

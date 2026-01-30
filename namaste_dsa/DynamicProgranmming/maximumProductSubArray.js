@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Tracking Min/Max).
+ * Intuitively, since a negative number multiplied by another negative number
+ * becomes positive, we track both the maximum product and the minimum product
+ * up to each index to catch potential large positive products.
+ */
 var maxProduct = function(arr) {
     let currMax = arr[0]
     let currMin = arr[0]

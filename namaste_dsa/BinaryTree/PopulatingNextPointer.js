@@ -1,3 +1,9 @@
+/**
+ * Approach: Recursive Level Linking.
+ * Intuitively, for a perfect binary tree, a node's left child always points to its right child.
+ * Additionally, a node's right child points to its parent's next node's left child.
+ * We establish these links recursively.
+ */
 var connect = function(root) {
     if(!root) return root
 

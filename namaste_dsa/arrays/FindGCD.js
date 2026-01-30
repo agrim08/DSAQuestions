@@ -1,3 +1,9 @@
+/**
+ * Approach: Euclidean Algorithm.
+ * Intuitively, the GCD of two numbers also divides their difference. We 
+ * find the minimum and maximum of the array, then use the recursive 
+ * Euclidean formula `gcd(a, b) = gcd(b, a % b)` until we reach zero.
+ */
 //Euclid's Algorithm to find GCD of two numbers
 var findGCD = function(nums) {
     let Min = Infinity

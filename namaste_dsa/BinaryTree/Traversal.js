@@ -1,3 +1,9 @@
+/**
+ * Approach: Simple Recursion.
+ * Intuitively, binary tree traversals are defined by when the root is processed:
+ * pre-order (root-left-right), in-order (left-root-right), and post-order (left-right-root).
+ * Recursion naturally handles the depth-first execution.
+ */
 //preorder
 var preorderTraversal = function(root) {
     let ans = []

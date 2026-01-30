@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search on Even/Odd Indices.
+ * Intuitively, in an array of pairs, the single element disrupts the index pattern.
+ * We check whether the counts on the left or right are even or odd to determine
+ * which side contains the solitary number.
+ */
 const singleNonDuplicate = function(arr){
     let l = 0
     let r = arr.length - 1

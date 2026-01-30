@@ -1,3 +1,9 @@
+/**
+ * Approach: Right-to-Left Traversal.
+ * Intuitively, any number is odd if its last digit is odd. We look for the 
+ * rightmost odd digit in the string; everything from the beginning up to 
+ * that digit forms the largest possible odd substring.
+ */
 var largestOddNumber = function(num) {
     let end = -1
 

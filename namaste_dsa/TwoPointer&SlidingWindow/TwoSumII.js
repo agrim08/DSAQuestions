@@ -1,3 +1,9 @@
+/**
+ * Approach: Two Pointers (Sorted Input).
+ * Intuitively, because the array is sorted, we can use two pointers at the 
+ * ends. If their sum is too high, we move the right pointer left; if too 
+ * low, we move the left pointer right, narrowing in on the target.
+ */
 var twoSum = function(arr, target) {
     let l = 0
     let r = arr.length - 1

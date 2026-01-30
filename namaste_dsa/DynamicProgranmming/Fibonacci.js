@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Memoization/Tabulation).
+ * Intuitively, we solve the recursion overlap by storing previously calculated
+ * Fibonacci numbers. Each number is simply the sum of the two preceding ones,
+ * which we either build 'top-down' with a cache or 'bottom-up' using an array.
+ */
 //top-down
 let store = {}
 var fib = function(n) {

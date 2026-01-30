@@ -1,3 +1,9 @@
+/**
+ * Approach: Greedy (Three Part Processing).
+ * Intuitively, we process intervals in three chunks: those that end before 
+ * the new one, those that overlap (which we merge into the new one), and 
+ * those that start after the new one has been placed.
+ */
 var insert = function(arr, x) {
     let n  = arr.length
     let i = 0

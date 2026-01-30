@@ -1,3 +1,9 @@
+/**
+ * Approach: Vertical Character-by-Character Scanning.
+ * Intuitively, we iterate through the characters of the first string and compare 
+ * them with the corresponding characters of all other strings. The moment we 
+ * find a mismatch or reach the end of any string, the current prefix is the answer.
+ */
 var longestCommonPrefix = function(s) {
     let x = 0
 

@@ -1,3 +1,9 @@
+/**
+ * Approach: Two Pointers (Gap Bridging).
+ * Intuitively, we calculate the lengths of both lists. We advance the 
+ * pointer of the longer list by the difference in lengths so that both 
+ * pointers are equidistant from the end. Then we move both until they meet.
+ */
 //Approach 1
 var getIntersectionNode = function(headA, headB) {
     let n = 0

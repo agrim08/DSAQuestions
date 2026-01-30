@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Combinatorial).
+ * Intuitively, the number of ways to reach a cell is the sum of ways to reach
+ * the cell directly above it and the cell directly to its left. We use
+ * memoization to avoid re-counting paths for the same cell.
+ */
 var uniquePaths = function (m, n) {
     let dp = Array.from({ length: m }, () => Array(n).fill(-1))
     let fn = (x, y) => {

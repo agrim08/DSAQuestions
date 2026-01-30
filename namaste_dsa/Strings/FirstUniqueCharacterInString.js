@@ -1,3 +1,9 @@
+/**
+ * Approach: Two-Pass Frequency Mapping.
+ * Intuitively, we first count occurrences of every character. In the second 
+ * pass, we return the index of the first character that appeared exactly 
+ * once in our frequency map.
+ */
 var firstUniqChar = function(s) {
     let map = {}
 

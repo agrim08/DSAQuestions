@@ -1,3 +1,9 @@
+/**
+ * Approach: Digit Reversal.
+ * Intuitively, a number is a palindrome if it reads the same forward and 
+ * backward. We reverse the digits using modulo and division, then compare 
+ * the result with the original number.
+ */
 function checkPallindrome(n){
     if(n < 0) return false
     if(n < 10) return true

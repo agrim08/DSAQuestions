@@ -1,3 +1,9 @@
+/**
+ * Approach: Sliding Window (Dynamic Size).
+ * Intuitively, we expand the window while the cost of replacing 
+ * non-dominant characters is <= `k`. If the cost exceeds `k`, we shrink 
+ * the window from the left to regain validity.
+ */
 var characterReplacement = function(s, k) {
     let i = 0, j = 0
     let map = {}

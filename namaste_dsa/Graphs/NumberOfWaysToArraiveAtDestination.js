@@ -1,3 +1,9 @@
+/**
+ * Approach: Dijkstra's Algorithm with Path Counting.
+ * Intuitively, we use Dijkstra to find the shortest time to reach each node.
+ * If we find a new shorter path, we reset the count; if we find a path of 
+ * equal length, we add the number of ways to reach the previous node to the current one.
+ */
 var countPaths = function(n, roads) {
     //adjancency list
     let graph = Array.from({ length: n }, () => [])

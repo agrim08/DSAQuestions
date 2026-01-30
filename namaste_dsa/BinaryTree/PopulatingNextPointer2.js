@@ -1,3 +1,9 @@
+/**
+ * Approach: Level-Order with Dummy Header.
+ * Intuitively, since the tree may not be perfect, we use a dummy node to track the
+ * start of each level. While traversing the current level, we link all children
+ * to form the next level's chain without extra space.
+ */
 var connect = function(root) {
     if (!root) return null;
 

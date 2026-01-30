@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Memoization).
+ * Intuitively, a string can be broken into words if some prefix is in the
+ * dictionary AND the remaining suffix can also be broken. We recursively
+ * try all possible prefixes and cache the results for each substring suffix.
+ */
 var wordBreak = function(s, wordDict) {
     let set = new Set(wordDict) 
     let dp = {}

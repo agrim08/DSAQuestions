@@ -1,5 +1,11 @@
 //this will fail if array is not sorted, [2,1] → "2,1", [1,2] → "1,2"
 
+/**
+ * Approach: Backtracking with Sorting.
+ * Intuitively, we generate all subsets of an array that may contain duplicates.
+ * By sorting the array and skipping identical elements at the same recursion level,
+ * we ensure each unique combination is added only once.
+ */
 var subsetsWithDup = function(arr) {
     let res = []
     let used = new Set()

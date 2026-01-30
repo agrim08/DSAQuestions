@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Memoization).
+ * Intuitively, a string can be decoded by taking either the last digit (if valid)
+ * or the last two digits (if they form a number between 10-26). We sum the ways
+ * from both recursive branches and store the results for each substring.
+ */
 var numDecodings = function(s) {
     let dp = {}
 

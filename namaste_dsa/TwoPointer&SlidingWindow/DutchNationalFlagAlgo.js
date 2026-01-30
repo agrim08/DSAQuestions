@@ -1,3 +1,9 @@
+/**
+ * Approach: Dutch National Flag (Three Pointers).
+ * Intuitively, we use three pointers (`low`, `mid`, `high`) to partition 
+ * the array into three sections: 0s on the left, 2s on the right, and 1s 
+ * in the middle. We swap elements to maintain this invariant.
+ */
 var sortColors = function(arr) {
     let low = 0
     let mid = 0

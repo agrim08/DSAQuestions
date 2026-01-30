@@ -1,3 +1,9 @@
+/**
+ * Approach: Stack-based Operand Processing.
+ * Intuitively, in RPN, operators follow their operands. We push numbers onto 
+ * a stack; when we hit an operator, we pop the last two numbers, apply the 
+ * operator, and push the result back onto the stack.
+ */
 var evalRPN = function(arr) {
     let s = []  
     for(let i = 0; i < arr.length; i++){

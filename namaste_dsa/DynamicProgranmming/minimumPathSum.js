@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (2D Memoization).
+ * Intuitively, to reach a cell `(x, y)` with minimum cost, you must come from
+ * either the cell above or the cell to the left. We take the minimum of those
+ * two and add the current cell's value.
+ */
 var minPathSum = function(arr) {
     if (!arr.length || !arr[0].length) return 0
 

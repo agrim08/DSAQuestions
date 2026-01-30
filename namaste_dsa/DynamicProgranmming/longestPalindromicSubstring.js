@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Expanding around center / 2D DP).
+ * Intuitively, a string is a palindrome if its first and last characters match
+ * and the inner substring is also a palindrome. we build up from 1-char and
+ * 2-char palindromes to find the longest one.
+ */
 var longestPalindrome = function(s) {
     let n = s.length
     let dp = Array.from({length: n}, () => Array(n).fill(null))

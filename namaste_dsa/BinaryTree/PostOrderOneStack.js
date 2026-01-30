@@ -1,3 +1,9 @@
+/**
+ * Approach: Single-Stack Iteration.
+ * Intuitively, post-order is tricky because we must visit children before the root.
+ * We use a stack and track the 'last visited' node to decide whether to process
+ * the current node or move into its right subtree.
+ */
 var postorderTraversal = function(root) {
     let s = []
     let ans = []

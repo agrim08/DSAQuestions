@@ -1,3 +1,10 @@
+/**
+ * Approach: Three-Pointer Max Tracking.
+ * Intuitively, we maintain three variables: `first`, `second`, and `third` 
+ * to store the top three unique maximums. We update them as we scan the 
+ * array, ensuring we handle duplicates and return the absolute max if 
+ * the third max doesn't exist.
+ */
 var thirdMax = function(nums) {
     let first = second = third = null
 

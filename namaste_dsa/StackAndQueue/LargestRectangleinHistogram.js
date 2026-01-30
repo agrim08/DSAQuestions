@@ -1,3 +1,9 @@
+/**
+ * Approach: Monotonic Stack (Increasing).
+ * Intuitively, a rectangle's height is limited by the shortest bar within its 
+ * width. We use a stack to keep bars in increasing order; when a shorter bar 
+ * appears, it ends the potential rectangles for all taller bars in the stack.
+ */
 var largestRectangleArea = function (heights) {
     let stack = []
     let max = 0

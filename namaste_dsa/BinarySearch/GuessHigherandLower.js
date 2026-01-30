@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search.
+ * Intuitively, this is a standard binary search where we treat the 'guess' feedback
+ * as low/high hints. We keep halving the search space based on whether the guess
+ * was too high or too low until we find the correct number.
+ */
 var guessNumber = function(n) {
     let l = 0
     let r = n

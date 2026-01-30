@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming.
+ * Intuitively, we count palindromes by checking substrings of all lengths.
+ * A substring is a palindrome if its edges match and the interior is already
+ * marked as a palindrome in our DP table.
+ */
 var countSubstrings = function(s) {
     let n = s.length
     let dp = Array.from({length: n}, () => Array(n).fill(null))

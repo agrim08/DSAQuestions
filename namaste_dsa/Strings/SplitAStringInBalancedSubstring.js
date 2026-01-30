@@ -1,3 +1,9 @@
+/**
+ * Approach: Greedy Balance Tracking.
+ * Intuitively, we keep a running 'balance' counter. We increment for one 
+ * character (e.g., 'R') and decrement for the other ('L'). Every time the 
+ * balance hits zero, we have found a primitive balanced substring.
+ */
 //approach 1 using stack
 var balancedStringSplit = function(s) {
     let stack = []

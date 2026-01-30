@@ -1,3 +1,9 @@
+/**
+ * Approach: Step-wise Reversal (Jump by 2k).
+ * Intuitively, we process the string in blocks of size `2k`. For each block, 
+ * we reverse only the first `k` characters using a two-pointer approach, 
+ * while leaving the next `k` characters as they are.
+ */
 var reverseStr = function(s, k) {
     s = s.split("")
     

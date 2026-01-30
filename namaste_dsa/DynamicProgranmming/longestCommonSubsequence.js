@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (2D Memoization).
+ * Intuitively, if characters at `i` and `j` match, they contribute 1 to the LCS
+ * and we move both pointers. If they don't, we take the maximum result of
+ * either skipping the current character in `s1` or skipping it in `s2`.
+ */
 var longestCommonSubsequence = function(s1, s2) {
     let n = s1.length
     let m = s2.length

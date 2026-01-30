@@ -1,3 +1,9 @@
+/**
+ * Approach: DFS Post-Order.
+ * Intuitively, we explore each node's dependencies deeply first. A node is 
+ * only added to the topological ordering after all its descendants have 
+ * been visited. Reversing this post-order sequence gives a valid linear ordering.
+ */
 //DFS
 function topologicalSort(n, graph) {
   let visited = new Set()

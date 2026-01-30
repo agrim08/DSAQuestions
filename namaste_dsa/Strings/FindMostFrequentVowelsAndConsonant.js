@@ -1,3 +1,9 @@
+/**
+ * Approach: Frequency Map + Category Filtering.
+ * Intuitively, we find how often each character appears. Then, we find the 
+ * highest frequency among vowels and the highest frequency among consonants 
+ * separately, and return their sum.
+ */
 var maxFreqSum = function(s) {
     let map = {}
 

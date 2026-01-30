@@ -1,3 +1,9 @@
+/**
+ * Approach: Monotonic Stack (Decreasing).
+ * Intuitively, we keep a stack of temperatures that haven't found a warmer day yet.
+ * When we see a warmer temperature, we pop indices from the stack and calculate 
+ * the number of days between the warmer day and each 'waiting' index.
+ */
 var dailyTemperatures = function(t) {
     let s = []
     let n = t.length

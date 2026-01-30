@@ -1,3 +1,9 @@
+/**
+ * Approach: Recursive Balanced Construction.
+ * Intuitively, since the array is sorted, the middle element must be the root to keep
+ * the tree balanced. We recursively treat the left and right halves as subtrees,
+ * continuing until the array is fully processed.
+ */
 var sortedArrayToBST = function(nums) {
     if (!nums || nums.length === 0) {
         return null;

@@ -1,3 +1,9 @@
+/**
+ * Approach: Iterative Division / Logarithmic Calculation.
+ * Intuitively, we can count digits by repeatedly dividing by 10 until the 
+ * number is exhausted, or use `log10` to directly calculate the scale of 
+ * the number in constant time.
+ */
 function countDigit(n){
     let count = 0;
     let temp = Math.abs(n);

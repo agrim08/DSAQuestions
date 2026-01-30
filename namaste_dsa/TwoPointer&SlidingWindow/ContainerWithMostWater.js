@@ -1,3 +1,9 @@
+/**
+ * Approach: Two Pointers (Greedy).
+ * Intuitively, the width of the container decreases as we move the pointers 
+ * inward. To maximize area, we must find taller bars, so we always move 
+ * the pointer pointing to the shorter bar.
+ */
 var maxArea = function(height) {
     let i = 0
     let j = height.length - 1

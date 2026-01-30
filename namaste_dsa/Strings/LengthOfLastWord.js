@@ -1,3 +1,9 @@
+/**
+ * Approach: Backward Scanning.
+ * Intuitively, since we need the length of the *last* word, we start from 
+ * the end of the string. We skip any trailing spaces, and then count 
+ * characters until the next space or the beginning of the string.
+ */
 var lengthOfLastWord = function(s) {
     let i = s.length - 1
     while(i >= 0 && s[i] == " "){

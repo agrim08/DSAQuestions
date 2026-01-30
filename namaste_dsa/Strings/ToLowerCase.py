@@ -1,3 +1,9 @@
+"""
+Approach: Character Normalization.
+Intuitively, we iterate through each character of the string. If we encounter 
+an uppercase letter, we convert it to its lowercase equivalent using built-in 
+string methods or ASCII manipulation.
+"""
 class Solution(object):
     def toLowerCase(self, s):
 

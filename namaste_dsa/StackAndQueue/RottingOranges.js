@@ -1,3 +1,9 @@
+/**
+ * Approach: Multi-Source BFS.
+ * Intuitively, all rotten oranges start infecting their neighbors at the 
+ * same time. We use a queue to track all rotten oranges and perform a 
+ * layer-by-layer (minute-by-minute) traversal to see how long it takes to cover the grid.
+ */
 var orangesRotting = function(grid) {
     let m = grid.length
     let n = grid[0].length

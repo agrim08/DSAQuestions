@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search.
+ * Intuitively, we look at the slope: if `nums[m] < nums[m + 1]`, we are on an upward slope
+ * and a peak must exist to the right. Otherwise, we are on a downward slope and a peak
+ * must exist to the left (or is `m` itself).
+ */
 function findPeak(nums){
     let l = 0
     let r = nums.length - 1

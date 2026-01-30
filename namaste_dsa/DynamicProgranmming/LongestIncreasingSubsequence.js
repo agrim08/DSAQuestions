@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming.
+ * Intuitively, we track the longest increasing subsequence ending at each index `i`.
+ * For every previous index `j < i`, if `arr[j] < arr[i]`, we can potentially extend the
+ * sequence ending at `j` by including `arr[i]`, updating `dp[i]` to the maximum possible length.
+ */
 var lengthOfLIS = function (arr) {
     let n = arr.length
     let dp = new Array(n).fill(1)

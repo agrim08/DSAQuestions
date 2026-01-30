@@ -1,3 +1,10 @@
+/**
+ * Approach: One-Pass with Gap Pointers.
+ * Intuitively, to find the N-th node from the end, we use two pointers. 
+ * First, we move one pointer N steps ahead. Then, we move both pointers 
+ * until the lead pointer reaches the end; the second pointer will then be 
+ * sitting just before the node to be removed.
+ */
 //approach 1    two pass
 var removeNthFromEnd = function(head, n) {
     let l = 0

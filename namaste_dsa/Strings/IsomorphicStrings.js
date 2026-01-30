@@ -1,3 +1,10 @@
+/**
+ * Approach: Two-Way Character Mapping.
+ * Intuitively, two strings are isomorphic if there is a consistent character 
+ * replacement rule. We maintain two maps: one for `s -> t` and another for 
+ * `t -> s` to ensure that each character from one string maps uniquely to 
+ * exactly one character in the other.
+ */
 var isIsomorphic = function(s, t) {
   let StoT = {}
   let TtoS = {}

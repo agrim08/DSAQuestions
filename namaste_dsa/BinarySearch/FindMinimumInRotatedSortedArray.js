@@ -1,3 +1,9 @@
+/**
+ * Approach: Binary Search.
+ * Intuitively, a rotated sorted array has one sorted half and one unsorted half
+ * containing the minimum. We compare `mid` with the boundaries to identify the
+ * sorted portion and narrow down the search to the part containing the pivot.
+ */
 var findMin = function(arr) {
     let l = 0
     let r = arr.length - 1

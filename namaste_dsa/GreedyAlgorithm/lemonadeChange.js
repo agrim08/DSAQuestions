@@ -1,3 +1,9 @@
+/**
+ * Approach: Greedy Simulation.
+ * Intuitively, we always prioritize giving larger bills (like $10) as change first
+ * to save smaller $5 bills, which are more versatile for future customers.
+ * If we run out of $5 bills, we can no longer serve customers.
+ */
 var lemonadeChange = function(bills) {
     let wallet = [0, 0]
 

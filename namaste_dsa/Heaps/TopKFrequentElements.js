@@ -1,3 +1,10 @@
+/**
+ * Approach: Frequency Map + Min-Heap (size k).
+ * Intuitively, we use a map to count the frequencies of all numbers. To find 
+ * the top `k` most frequent ones, we maintain a min-heap of size `k`. When 
+ * the heap exceeds size `k`, we pop the element with the smallest frequency, 
+ * leaving the `k` largest frequencies in the heap.
+ */
 class MinHeap1 {
     constructor() {
         this.heap = [];

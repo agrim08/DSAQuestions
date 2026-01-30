@@ -1,3 +1,10 @@
+/**
+ * Approach: Single Queue Rotation.
+ * Intuitively, a stack is LIFO while a queue is FIFO. To simulate a stack with 
+ * a queue, every time we want to 'pop', we rotate the queue `N-1` times 
+ * (taking the front and putting it at the back) so the last added element 
+ * ends up at the front.
+ */
 var MyStack = function() {
     this.q1 = []
 };

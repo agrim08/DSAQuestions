@@ -1,3 +1,9 @@
+/**
+ * Approach: Dynamic Programming (Minimum of Neighbors).
+ * Intuitively, for a cell to be the bottom-right of a square of size `S`, its
+ * top, left, and top-left neighbors must all be the bottom-right of squares
+ * of size at least `S-1`. We take the minimum of these and add 1.
+ */
 var maximalSquare = function(matrix) {
     let rows = matrix.length
     let cols = matrix[0].length

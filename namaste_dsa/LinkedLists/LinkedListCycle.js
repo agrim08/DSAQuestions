@@ -1,3 +1,9 @@
+/**
+ * Approach: Floyd's Tortoise and Hare / Hashing.
+ * Intuitively, a cycle exists if we revisit a node. We use two pointers moving 
+ * at different speeds; if there is a cycle, the fast pointer will eventually 
+ * "lap" the slow pointer and they will meet.
+ */
 //approach 1
 var hasCycle = function(head) {
     const s = new Set()

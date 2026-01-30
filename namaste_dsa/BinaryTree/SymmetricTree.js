@@ -1,3 +1,9 @@
+/**
+ * Approach: Mirror DFS.
+ * Intuitively, a tree is symmetric if its left and right subtrees are mirror
+ * images of each other. We check if the left's left child matches the right's
+ * right child, and the left's right child matches the right's left child.
+ */
 var isSymmetric = function(root) {
     let isMirror = (left, right) => {
         if(!left && !right) return true

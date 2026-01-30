@@ -1,3 +1,9 @@
+/**
+ * Approach: Greedy (Earliest Deadline First).
+ * Intuitively, to minimize removals, we want to keep intervals that end as early
+ * as possible. By sorting by end times, we always pick the interval that leaves 
+ * the most room for the remaining ones.
+ */
 var eraseOverlapIntervals = function(arr) {
     arr.sort((a, b) => (a[1] - b[1]))
 

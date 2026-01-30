@@ -1,3 +1,9 @@
+/**
+ * Approach: Hierholzer's Algorithm (Eulerian Path).
+ * Intuitively, we always try to visit the lexicographically smallest destination 
+ * first. We perform a DFS and append nodes to the path only after all their 
+ * edges are exhausted, then reverse the result to get the correct itinerary.
+ */
 var findItinerary = function(tickets) {
     let graph = {}
     

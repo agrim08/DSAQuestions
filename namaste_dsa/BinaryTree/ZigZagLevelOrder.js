@@ -1,3 +1,9 @@
+/**
+ * Approach: Level-Order with Directional Toggle.
+ * Intuitively, we perform a standard level-order traversal (BFS). For every 
+ * even level, we append values normally, and for odd levels, we prepend 
+ * them (or reverse the array) to achieve the zigzag effect.
+ */
 var zigzagLevelOrder = function(root) {
     if(!root) return []
 

@@ -1,3 +1,9 @@
+/**
+ * Approach: Longest Prefix Suffix (LPS) Preprocessing.
+ * Intuitively, KMP avoids redundant comparisons by using information 
+ * about the pattern itself. We pre-calculate an LPS array to know how 
+ * much of the pattern can be skipped when a mismatch occurs.
+ */
 //* KMP Algorithm to find the first occurrence of needle in haystack
 var strStr = function(haystack, needle) {
     let m = haystack.length

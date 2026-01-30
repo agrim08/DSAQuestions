@@ -1,3 +1,9 @@
+/**
+ * Approach: Modulo/Division Iteration.
+ * Intuitively, we extract the last digit using `% 10` and append it to 
+ * our reversed result. We divide by 10 in each step until all digits 
+ * are processed, while handling the sign and overflow.
+ */
 function reverseInt(n){
     let copy = n
     n = Math.abs(n)

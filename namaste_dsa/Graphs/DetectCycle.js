@@ -1,3 +1,9 @@
+/**
+ * Approach: DFS Cycle Detection (Undirected).
+ * Intuitively, a cycle exists if we encounter an already visited node that is 
+ * not the direct parent of the current node. This means there's a back-edge 
+ * forming a closed loop in the graph.
+ */
 //detect cycle in undirected connected graph using DFS
 
 function hasCycle(edges) {

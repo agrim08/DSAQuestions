@@ -1,3 +1,9 @@
+/**
+ * Approach: BFS / Connected Components.
+ * Intuitively, we need `N-1` cables to connect `N` computers. We first check 
+ * if we have enough total cables. If so, we count the number of separate 
+ * connected components; the moves needed is simply `components - 1`.
+ */
 var makeConnected = function(n, connections) {
     if(connections.length < n - 1){
         return -1

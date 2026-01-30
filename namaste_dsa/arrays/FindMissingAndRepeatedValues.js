@@ -1,3 +1,9 @@
+/**
+ * Approach: Frequency Array / Hash Set.
+ * Intuitively, we know the sum and squares of numbers from 1 to N^2. By 
+ * counting occurrences of each number in the grid, we can identify which 
+ * number appeared twice and which number never appeared.
+ */
 var findMissingAndRepeatedValues = function(grid) {
     let repeat = -1
     let missing = -1

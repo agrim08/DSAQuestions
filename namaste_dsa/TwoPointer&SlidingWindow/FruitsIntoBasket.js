@@ -1,3 +1,9 @@
+/**
+ * Approach: Sliding Window + Hash Map.
+ * Intuitively, we maintain a sliding window that contains at most 2 types 
+ * of fruits. When a third type arrives, we shrink the window from the 
+ * left until only two types remain, tracking the maximum window size.
+ */
 var totalFruit = function(fruits) {
     let left = 0
     let max = 0

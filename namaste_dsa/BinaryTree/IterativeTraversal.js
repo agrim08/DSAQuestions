@@ -1,3 +1,9 @@
+/**
+ * Approach: Stack-based Iteration.
+ * Intuitively, we mimic recursion using a stack. For pre-order, we process root then children;
+ * for in-order, we drill left and process on pop; for post-order, we use a second stack
+ * or reverse logic to ensure children are processed before the root.
+ */
 var preorderTraversal = function(root) {
     if(!root) return []
     let ans = []
