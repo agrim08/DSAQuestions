@@ -7,7 +7,7 @@ function findMaxConsecutiveOnes(nums){
             count++
             max = Math.max(max, count)
         }else{
-            count = 0 
+            count = 0
         }
     }
 

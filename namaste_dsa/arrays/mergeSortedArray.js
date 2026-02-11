@@ -1,3 +1,9 @@
+/**
+ * Approach: Uses three pointers starting from the end of the arrays.
+ * By filling nums1 from the back (indices m+n-1 towards 0), we avoid overwriting 
+ * existing elements in nums1 that haven't been compared yet.
+ * This results in an O(m+n) time complexity and O(1) space complexity.
+ */
 function mergeSortedArrays(nums1, m, nums2, n) {
     let p1 = m - 1
     let p2 = n - 1
