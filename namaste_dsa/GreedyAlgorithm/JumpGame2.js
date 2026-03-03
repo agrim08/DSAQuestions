@@ -3,15 +3,15 @@ var jump = function(nums) {
     if (n <= 1) return 0;
 
     let jumps = 0;
-    let coverage = 0;
-    let lastJump = 0;
+    let farthest = 0;
+    let currEnd = 0;
 
     for (let i = 0; i < n - 1; i++) {
-        coverage = Math.max(coverage, i + nums[i]);
+        farthest = Math.max(farthest, i + nums[i]);
 
-        if (i === lastJump) {
+        if (i === currEnd) {
             jumps++;
-            lastJump = coverage;
+            currEnd = farthest;
         }
     }
 
