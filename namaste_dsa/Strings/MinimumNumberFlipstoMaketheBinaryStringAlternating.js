@@ -1,6 +1,8 @@
 var minFlips = function (s) {
     let n = s.length
 
+    // s = s + s
+
     let s1 = ""
     let s2 = ""
     for (let i = 0; i < n * 2; i++) {
@@ -15,10 +17,10 @@ var minFlips = function (s) {
     let j = 0
 
     while (j < 2 * n) {
-        if (s[j % n] !== s1[j]) { //trick to access circular elements
+        if (s[j % n] !== s1[j]) { //trick to access circular elements (no need for s + s)
             flip1++
         }
-        if (s[j % n] !== s2[j]) {
+        if (s[j % n] !== s2[j]) { //trick to access circular elements (no need for s + s)
             flip2++
         }
         if (j - i + 1 > n) {
