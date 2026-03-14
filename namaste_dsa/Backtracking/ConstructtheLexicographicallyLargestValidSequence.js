@@ -12,6 +12,7 @@ var constructDistancedSequence = function (n) {
 
         for (let num = n; num >= 1; num--) {
             if (used[num]) continue;
+            
             // try
             used[num] = true;
             result[i] = num;
