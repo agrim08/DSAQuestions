@@ -1,10 +1,11 @@
 /**
- * Approach: Backtracking with Sorting.
- * Intuitively, to handle duplicate elements, we sort them first. During recursion,
- * if the current element is the same as the previous one in the same level,
- * we skip it to prevent identical permuted sequences.
+ * Approach: Backtracking with Sorting and Skipping.
+ * To handle duplicates, we sort the array first. During recursion,
+ * if the current element is the same as the previous one and we haven't
+ * processed the previous one (i > 0 && choices[i] === choices[i-1]),
+ * we skip it to avoid generating identical permutations.
  */
-var permuteUnique = function(arr) {
+var permuteUnique = function (arr) {
     arr.sort((a, b) => (a - b))
     let res = []
 
@@ -14,12 +15,12 @@ var permuteUnique = function(arr) {
             return
         }
         for (let i = 0; i < choices.length; i++) {
-            if(i > 0 && choices[i] === choices[i - 1]){
+            if (i > 0 && choices[i] === choices[i - 1]) {
                 continue
             }
             path.push(choices[i])
             backtrack(path, [...choices.slice(0, i), ...choices.slice(i + 1)])
-            path.pop()    
+            path.pop()
         }
     }
 
