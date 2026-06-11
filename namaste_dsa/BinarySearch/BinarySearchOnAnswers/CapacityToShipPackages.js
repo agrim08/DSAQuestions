@@ -1,3 +1,8 @@
+// Approach: Binary Search on Answer (Minimizing Maximum Ship Capacity).
+// The search space ranges from the maximum package weight (minimum capacity to ship any single item) to the sum of all weights.
+// We binary search for the minimum capacity within this range that allows shipping all packages within the given days limit.
+// A helper check function calculates the number of days required to ship packages sequentially for a given candidate capacity.
+// If the required days are within the limit, we try a smaller capacity; otherwise, we must increase the capacity.
 var shipWithinDays = function (arr, days) {
     let l = Math.max(...arr)
     let r = arr.reduce((acc, cur) => acc + cur, 0)

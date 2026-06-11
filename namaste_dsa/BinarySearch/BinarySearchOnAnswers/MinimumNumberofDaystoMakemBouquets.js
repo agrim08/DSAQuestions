@@ -1,3 +1,8 @@
+// Approach: Binary Search on Answer (Minimizing Days to Bloom).
+// The search space ranges from the minimum bloom day in the array to the maximum bloom day.
+// We binary search for the minimum day such that we can make at least M bouquets of K adjacent flowers.
+// A helper check function counts how many bouquets we can form if we only pick flowers bloomed by 'day'.
+// If we can form at least M bouquets, we update the result and try fewer days; else, we try more days.
 function midDays(arr, m, k){
     if(m * k > arr.length) return -1
 

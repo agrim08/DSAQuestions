@@ -1,9 +1,8 @@
-/**
- * Approach: Binary Search on Answer.
- * Intuitively, the sum of division results is inversely proportional to the divisor (monotonic).
- * We search for the smallest divisor in the range [1, max(nums)]. If a divisor works (sum <= threshold),
- * we ignore the right half to minimize it further; otherwise, we search the right half for a valid divisor.
- */
+// Approach: Binary Search on Answer (Find Smallest Divisor).
+// The search space ranges from 1 to the maximum element in the array.
+// For a candidate divisor, we calculate the sum of division results rounded up.
+// If the sum is within the threshold, we search the left half to minimize the divisor.
+// Otherwise, the divisor is too small, so we search for a larger divisor in the right half.
 var smallestDivisor = function(nums, threshold) {
     let low = 1
     let high = maxOfArray(nums)

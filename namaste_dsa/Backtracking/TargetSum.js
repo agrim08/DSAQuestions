@@ -33,9 +33,9 @@
 ```
 
 
-function TargetSum(nums, target){
-    function dfs(index, sum){
-        if(index === nums.length){
+function TargetSum(nums, target) {
+    function dfs(index, sum) {
+        if (index === nums.length) {
             return sum === target ? 1 : 0
         }
 
