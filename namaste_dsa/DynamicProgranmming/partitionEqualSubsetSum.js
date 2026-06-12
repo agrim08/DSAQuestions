@@ -1,28 +1,29 @@
-/**
- * Approach: Dynamic Programming (0/1 Knapsack Variation).
- * Intuitively, to split an array into two equal sums, we must be able to find
- * a subset that sums up to exactly half of the total sum. we use recursion
- * with memoization to check every possible subset combination.
- */
-var canPartition = function(arr) {
-    let sum = arr.reduce((acc, curr) => acc + curr, 0)
-    if(sum % 2 != 0) return false
+var canPartition = function (arr) {
+    let n = arr.length
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    if (sum % 2 != 0) return false
     sum /= 2
 
-    let dp = Array.from({ length: sum + 1}, () => Array(arr.length).fill(undefined))
+    let dp = Array.from({ length: n }, () => Array(sum + 1))
 
-    let fn = (remS, start) => {
-        if(remS === 0) return true
-        if(remS < 0) return false
+    function helper(index, currSum) {
+        if (currSum === 0) return true
+        if (index < 0 || currSum < 0) return false
 
-        if(dp[remS][start] != undefined) return dp[remS][start]
-        
-        for(let i = start; i < arr.length; i++){
-            if(fn(remS - arr[i], i + 1)){
-                return dp[remS][start] = true
-            }
+        if (dp[index][currSum] !== undefined) return dp[index][currSum]
+
+        let include = false
+        if (arr[index] <= currSum) {
+            include = helper(index - 1, currSum - arr[index])
         }
-        return dp[remS][start] = false
+        let exclude = helper(index - 1, currSum)
+
+        dp[index][currSum] = include || exclude
+        return dp[index][currSum]
     }
-    return fn(sum, 0)
+
+    return helper(n - 1, sum)
 };
