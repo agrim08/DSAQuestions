@@ -7,7 +7,8 @@ function perfectSum(arr, target) {
         if (store[index][currentSum] !== -1) return store[index][currentSum]
 
         if (index === 0) {
-            if (currentSum === 0 && arr[0] === 0) return 2;
+            if (currentSum === 0 && arr[0] === 0) return 2;  //When arr[0] = 0 and currentSum = 0, both including and excluding 0 produce valid subsets,
+            // so the count is 2. Otherwise, there is at most one valid subset.
             if (currentSum === 0 || currentSum === arr[0]) return 1;
             return 0;
         }
