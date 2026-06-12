@@ -5,17 +5,52 @@
  * and cache results to avoid recalculating the same amounts multiple times.
  */
 //brute force - TLE
-var coinChange = function(coins, amount) {
+
+
+//Best approach
+var coinChange = function (coins, amount) {
+    const dp = Array.from(
+        { length: coins.length },
+        () => Array(amount + 1).fill(-1)
+    );
+
+    function solve(idx, target) {
+
+        if (target === 0) return 0;
+
+        if (idx === coins.length) return Infinity;
+
+        if (dp[idx][target] !== -1)
+            return dp[idx][target];
+
+        let notTake = solve(idx + 1, target);
+
+        let take = Infinity;
+
+        if (coins[idx] <= target) {
+            take = 1 + solve(idx, target - coins[idx]);
+        }
+
+        return dp[idx][target] =
+            Math.min(take, notTake);
+    }
+
+    const ans = solve(0, amount);
+
+    return ans === Infinity ? -1 : ans;
+};
+
+var coinChange = function (coins, amount) {
     let n = coins.length
     let calcMinCoin = (remAmount) => {
-        if(remAmount === 0) return 0
-        if(remAmount < 0) return -1
+        if (remAmount === 0) return 0
+        if (remAmount < 0) return -1
 
         let minCoin = Infinity
 
-        for(let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             let res = calcMinCoin(remAmount - coins[i])
-            if(res != -1){
+            if (res != -1) {
                 minCoin = Math.min(minCoin, 1 + res)
             }
         }
@@ -27,21 +62,21 @@ var coinChange = function(coins, amount) {
 //optimized with DP
 
 //*using Objects as store for memoization
-var coinChange = function(coins, amount) {
+var coinChange = function (coins, amount) {
     let n = coins.length
     let store = {}
 
     let calcMinCoin = (remAmount) => {
-        if(remAmount === 0) return 0
-        if(remAmount < 0) return -1
+        if (remAmount === 0) return 0
+        if (remAmount < 0) return -1
 
-        if(remAmount in store){
+        if (remAmount in store) {
             return store[remAmount]
         }
         let minCoin = Infinity
-        for(let i = 0; i < n; i++){
+        for (let i = 0; i < n; i++) {
             let res = calcMinCoin(remAmount - coins[i])
-            if(res != -1){
+            if (res != -1) {
                 minCoin = Math.min(minCoin, 1 + res)
             }
         }
@@ -53,7 +88,7 @@ var coinChange = function(coins, amount) {
 
 
 //*using Array as store for memoization (faster than object)
-var coinChange = function(coins, amount) {
+var coinChange = function (coins, amount) {
     let store = new Array(amount + 1).fill(undefined);
     function calc(rem) {
         if (rem === 0) return 0;
@@ -61,7 +96,7 @@ var coinChange = function(coins, amount) {
         if (store[rem] !== undefined) return store[rem];
 
         let minCoin = Infinity;
-        
+
         for (let c of coins) {
             let res = calc(rem - c);
             if (res !== -1) minCoin = Math.min(minCoin, 1 + res);
