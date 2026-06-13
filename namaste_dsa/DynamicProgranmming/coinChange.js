@@ -20,16 +20,14 @@ var coinChange = function (coins, amount) {
 
         if (idx === coins.length) return Infinity;
 
-        if (dp[idx][target] !== -1)
-            return dp[idx][target];
-
-        let notTake = solve(idx + 1, target);
+        if (dp[idx][target] !== -1) return dp[idx][target];
 
         let take = Infinity;
-
         if (coins[idx] <= target) {
             take = 1 + solve(idx, target - coins[idx]);
         }
+
+        let notTake = solve(idx + 1, target);
 
         return dp[idx][target] =
             Math.min(take, notTake);
